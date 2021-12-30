@@ -1,0 +1,5 @@
+-   id: check_pdb_hook
+    name: Check for exposed PDB statements
+    description: Check for exposed PDB statements in Python files.
+    entry: check_pdb_hook
+    language: python
