@@ -19,7 +19,8 @@ def check_pdb_hook(files: Sequence[str], strict: bool = False) -> int:
         pdb_instances = [i for i in check.stdout.split('\n') if i]
         if strict and pdb_instances:
             print(f'{filename} has instance of PDB call. (Strict mode)')
-            return 1
+            ret_val = 1
+            continue
         for instance in pdb_instances:
             octothorpe_idx = instance.find('#')
             if octothorpe_idx == -1 or octothorpe_idx > instance.find('pdb.set_trace'):
