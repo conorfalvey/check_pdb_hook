@@ -26,6 +26,7 @@ def check_pdb_hook(files: Sequence[str], strict: bool = False) -> int:
             if octothorpe_idx == -1 or octothorpe_idx > instance.find('pdb.set_trace'):
                 print(f'{filename} contains exposed PDB statements')
                 ret_val = 1
+                continue
     return ret_val
 
 
