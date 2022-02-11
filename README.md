@@ -5,7 +5,7 @@ Add this to your `.pre-commit-config.yaml`
 
 ```yaml
 -   repo: https://github.com/conorfalvey/check_pdb_hook
-    rev: v0.0.9
+    rev: 0.0.9
     hooks:
     -   id: check_pdb_hook
 ```
